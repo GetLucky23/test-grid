@@ -1,0 +1,76 @@
+@import "./utils/extends";
+
+html {
+  height: 100%;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.header, .ads, .sidebar, .main, .news, .footer {
+  @extend %block-padding-border-box;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: (100% / 6);
+  background-color: #25384a;
+}
+
+.sidebar {
+  position: absolute;
+  top: (100% / 6);
+  left: 0;
+  height: (100% * 2 / 3);
+  width: 25%;
+  background-color: #ffbc00;
+}
+
+.main {
+  position: absolute;
+  left: 25%;
+  bottom: (100% / 6);
+  width: 50%;
+  height: 50%;
+  background-color: #ff530d;
+}
+
+.news {
+  position: absolute;
+  right: 0;
+  bottom: (100% / 6);
+  width: 25%;
+  height: 50%;
+  background-color: #ffbc00;
+}
+
+.ads {
+  position: absolute;
+  top: (100% / 6);
+  right: 0;
+  width: 75%;
+  height: (100% / 6);
+  background-color: #257d92;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: (100% / 6);
+  background-color: #25384a;
+}
