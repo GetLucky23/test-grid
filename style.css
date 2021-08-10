@@ -1,4 +1,7 @@
-@import "./utils/extends";
+.header, .ads, .sidebar, .main, .news, .footer {
+  box-sizing: border-box;
+  padding: 1rem 0;
+}
 
 html {
   height: 100%;
@@ -13,21 +16,12 @@ body {
   margin: 0;
 }
 
-.header, .ads, .sidebar, .main, .news, .footer {
-  @extend %block-padding-border-box;
-}
-
 .container {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 50% 1fr;
   grid-template-rows: 1fr 1fr 50% 1fr;
-
-  grid-template-areas: 
-    "header header header"
-    "sidebar ads ads"
-    "sidebar main news"
-    "footer footer footer";
+  grid-template-areas: "header header header" "sidebar ads ads" "sidebar main news" "footer footer footer";
 }
 
 .header {
@@ -59,3 +53,5 @@ body {
   grid-area: footer;
   background-color: #25384a;
 }
+
+/*# sourceMappingURL=style.css.map */
